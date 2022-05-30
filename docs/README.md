@@ -2,10 +2,11 @@
 
 ## 基本情報
 
-|key|value|
+|||
 |---|---|
 |氏名|芳賀 祐仁 (ハガ ユウト)|
 |生年月日|1992/03/16|
+|Github|https://github.com/HagaSpa|
 |Twitter|https://twitter.com/haga_spa|
 |Qiita|https://qiita.com/HagaSpa|
 |note|-|
@@ -28,7 +29,7 @@
 ## 技術スタック
 
 ### Application Language
-- Golang, Python, Node.js, Java, PHP
+- Golang, Python, Node.js, Java, PHP, C#
 - TypeScript, JavaScript
 
 ### Framework
@@ -91,9 +92,15 @@ Biz側からの要求を聞くだけではなく、本当に解決したい課�
 
 
 ### [株式会社アウトソーシングテクノロジー（2015/04〜2018/09）](https://www.ostechnology.co.jp/)
-TODO
+新卒で入社。開発を中心に設計からテストまで携わり、主にバックエンドを中心に作業を行ってきた。
+受託会社のため案件毎に利用する技術が変わるため、参画した後に円滑に業務が行えるように新しい技術のキャッチアップの仕方を学んだ。
 
-
+- **プロジェクト規模：**
+    - 平均 10~15名による開発
+- **プロジェクト詳細：**
+    - C#を用いたパッケージ開発、PHP,Java,Node.jsを用いたAPI開発。
+    - AWSを利用したフルマネージドな会員管理サービスの開発。
+    - 音声合成システムの開発
 
 
 
