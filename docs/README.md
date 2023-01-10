@@ -9,14 +9,18 @@
 |Github|https://github.com/HagaSpa|
 |Twitter|https://twitter.com/haga_spa|
 |Qiita|https://qiita.com/HagaSpa|
-|note|-|
-|Zenn|-|
-|SpeakerDeck|-|
+---
+
+## 経歴
+- 2022.11 - 現在: 株式会社dinii ※業務委託
+- 2021.12 - 現在: OLTA株式会社 ※業務委託
+- 2021.01 - 現在: オムニス株式会社
+- 2018.09 - 2020.12: auコマース＆ライフ株式会社
+- 2015.04 - 2018.09: 株式会社アウトソーシングテクノロジー
 
 ---
 
 ## 保有スキル
-
 - Golang / Python によるバックエンドの開発・設計
 - Github Actions / Cloud Build を用いたDevOpsの構築・設計
 - AWS / GCP を用いたデータ分析基盤,Webアプリ,バッチ処理のアーキテクチャ構築・設計
@@ -105,6 +109,9 @@ Biz側からの要求を聞くだけではなく、本当に解決したい課�
 
 
 ## 職務経歴詳細 (業務委託)
+### [株式会社dinii (2022/11~現在)](https://www.dinii.jp/)
+TODO
+
 ### [OLTA株式会社 (2021/12〜現在)](http://corp.olta.co.jp/)
 審査情報をDataLakeへ取り込むためのプログラムの作成を行った。
 前任者が作成した類似物があったが、イメージ内部にクラウドの認証情報を持つ作りになっており、コンテナ利用も簡素なものとなっていた。
