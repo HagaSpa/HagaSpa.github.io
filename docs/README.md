@@ -1,5 +1,6 @@
 # 職務経歴書
 
+
 ## 基本情報
 
 |||
@@ -10,7 +11,6 @@
 |Twitter|https://twitter.com/haga_spa|
 |Qiita|https://qiita.com/HagaSpa|
 
----
 
 ## 経歴
 - 2022.11 - 現在: 株式会社dinii ※業務委託
