@@ -1,22 +1,7 @@
-# { name } resume
+# { HagaSpa } resume
 
-## Sample
-
-https://github.com/kawamataryo/resume
 
 ## Features
-
-### 💅 Lint text
-
-Automatic proofreading with [textlint](https://github.com/textlint/textlint).
-
-```
-$ yarn lint --fix
-```
-It is also automatically executed when pre-commit by [husky](https://github.com/typicode/husky).  
-proofreading rules are set with `.textlintrc`.
-
-
 
 ### 📝 Convert MD to PDF
 
@@ -39,9 +24,3 @@ $ git tag v1.0
 $ git push origin --tags
 ```
 
-### 📆 Remind update
-
-Automatically generate issues every three months with GitHub Actions Schedules triggers to prompt you to update your resume.
-
-To change the duration or stop the job, edit `.github/workflows/create-issue.yml`.  
-To change the issue contents, edit `.github/ISSUE_TEMPLATE.md`.
