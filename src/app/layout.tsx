@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={inter.className}>
       <body className="transition-colors duration-300">
-        <div className="max-w-7xl container mx-auto flex min-h-screen text-slate-800 lg:flex-row">
+        <div className="max-w-7xl container mx-auto flex min-h-screen text-slate-800 flex-row">
           <Sidebar />
           <main className="flex-1 p-8 bg-gray-50">{children}</main>
         </div>
