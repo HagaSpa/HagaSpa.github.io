@@ -1,13 +1,7 @@
-
-## 基本情報
-
-|||
-|---|---|
-|氏名|芳賀 祐仁 (ハガ ユウト)|
-|生年月日|1992/03/16|
-|Github|https://github.com/HagaSpa|
-|Twitter|https://twitter.com/haga_spa|
-|Qiita|https://qiita.com/HagaSpa|
+---
+title: "HagaSpa's Resume"
+description: "Software Engineer Resume"
+---
 
 
 ## 経歴
