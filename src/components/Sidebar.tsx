@@ -11,8 +11,8 @@ const contactItems: Array<{ icon: LucideIcon; text: string; href: string }> = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-80 min-w-80 !bg-blue-50 p-8 border-r-slate-400 shadow-lg">
-      <div className="flex flex-col items-center sticky top-8">
+    <aside className="w-full lg:w-80 lg:flex-shrink-0 bg-blue-50 p-8 lg:border-r lg:border-slate-400 shadow-lg">
+      <div className="flex flex-col items-center lg:sticky lg:top-8">
         <div className="relative max-w-24 mx-auto">
           <Image
             className="rounded-full"
