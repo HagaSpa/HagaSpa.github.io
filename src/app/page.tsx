@@ -12,17 +12,12 @@ interface ResumeData {
 async function getResumeContent() {
   const filePath = path.join(process.cwd(), "contents/resume.md");
   const fileContents = fs.readFileSync(filePath, "utf8");
-  console.log("Raw markdown content:", fileContents.substring(0, 500)); // デバッグ用
-
   const matterResult = matter(fileContents);
-  console.log("Frontmatter data:", matterResult.data); // デバッグ用
-  console.log("Content after frontmatter:", matterResult.content.substring(0, 500)); // デバッグ用
 
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
-  console.log("Generated HTML:", contentHtml.substring(0, 1000)); // デバッグ用
 
   return {
     contentHtml,

@@ -1,12 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Github, Twitter, Globe, LucideIcon } from 'lucide-react';
+import { Mail, Globe } from 'lucide-react';
+import { GithubIcon, TwitterIcon } from './BrandIcons';
+import { ContactItem } from './types';
 
-const contactItems: Array<{ icon: LucideIcon; text: string; href: string }> = [
-  { icon: Mail, text: "hagaspa@gmail.com", href: "mailto:hagaspa@gmail.com" },
-  { icon: Github, text: "hagaspa", href: "https://github.com/hagaspa" },
-  { icon: Twitter, text: "hagaspa", href: "https://t.co/chUwJHJfiA" },
-  { icon: Globe, text: "hagaspa.github.io", href: "https://hagaspa.github.io/" },
+const contactItems: ContactItem[] = [
+  { icon: Mail, text: "justicesparrow@gmail.com", href: "mailto:justicesparrow@gmail.com" },
+  { icon: GithubIcon, text: "HagaSpa", href: "https://github.com/hagaspa" },
+  { icon: TwitterIcon, text: "haga_spa", href: "https://x.com/haga_spa" },
+  { icon: Globe, text: "hagaspa.com", href: "https://hagaspa.com" },
 ];
 
 const Sidebar = () => {
