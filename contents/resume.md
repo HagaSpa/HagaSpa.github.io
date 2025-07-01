@@ -6,7 +6,7 @@ description: "Software Engineer Resume"
 
 ## 経歴
 - 2023.06 - 現在: 株式会社dinii
-- 2021.12 - 現在: OLTA株式会社 ※業務委託
+- 2021.12 - 2023.01: OLTA株式会社 ※業務委託
 - 2022.11 - 2023.05: 株式会社dinii ※業務委託
 - 2021.01 - 2023.05: オムニス株式会社
 - 2018.09 - 2020.12: auコマース＆ライフ株式会社
@@ -35,11 +35,12 @@ description: "Software Engineer Resume"
 - TypeScript, JavaScript
 
 ### Framework
-- go-chi, sql boiler, Django, Spring, Laravel
-- React, Vue.js
+- Nest.js, go-chi, sql boiler, Django, Spring, Laravel
+- Nest.js, React.js, Vue.js
 
 
 ### Middleware
+- graphQL (Hasura)
 - mysql, postgres
 - Kubernetes, ArgoCD, Kustomize, Terraform
 - sentry
