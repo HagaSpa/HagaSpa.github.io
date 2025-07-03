@@ -5,10 +5,10 @@ description: "Software Engineer Resume"
 
 
 ## 経歴
-- 2023.06 - 現在: 株式会社dinii
+- 2023.06 - 現在: 株式会社ダイニー
 - 2021.12 - 2023.01: OLTA株式会社 ※業務委託
-- 2022.11 - 2023.05: 株式会社dinii ※業務委託
-- 2021.01 - 2023.05: オムニス株式会社
+- 2022.11 - 2023.05: 株式会社ダイニー ※業務委託
+- 2021.01 - 2023.05: 株式会社OpenFashion (旧株式会社OMNIS) 
 - 2018.09 - 2020.12: auコマース＆ライフ株式会社
 - 2015.04 - 2018.09: 株式会社アウトソーシングテクノロジー
 
@@ -56,7 +56,7 @@ description: "Software Engineer Resume"
 
 ## 職務経歴詳細 (プロパー)
 
-### [株式会社dinii (2023/06~現在)](https://www.dinii.jp/)
+### [株式会社ダイニー (2023/06~現在)](https://www.dinii.jp/)
 
 **Platform Engineer  (2023/06~現在)**
 
@@ -85,7 +85,7 @@ description: "Software Engineer Resume"
 
 
 
-### [オムニス株式会社 (2021/01〜2023/5)](https://www.omnisinc.co/)
+### [株式会社OpenFashion (旧株式会社OMNIS) (2021/01〜2023/5)](https://www.omnisinc.co/)
 
 **生産管理システムにおけるリードエンジニア**
 
@@ -144,7 +144,7 @@ description: "Software Engineer Resume"
 
 
 ## 職務経歴詳細 (業務委託)
-### [株式会社dinii (2022/11~2023/05)](https://www.dinii.jp/)
+### [株式会社ダイニー (2022/11~2023/05)](https://www.dinii.jp/)
 当初はパフォーマンスと安定性を求めたインフラを構築するための採用となっていたが、特定の領域に固定せずフルスタックにタスクを着手した。
 自分のキャリアとしては初めて React Native を用いたモバイルのフロント開発に携わり、フィルタ機能の実装などを行った。
 
