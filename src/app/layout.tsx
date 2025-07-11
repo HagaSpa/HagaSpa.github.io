@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Skill Sheet",
   description: "HagaSpa's Skill Sheet",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
