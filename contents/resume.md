@@ -5,9 +5,8 @@ description: "Software Engineer Resume"
 
 
 ## 経歴
-- 2023.06 - 現在: 株式会社ダイニー
-- 2021.12 - 2023.01: OLTA株式会社 ※業務委託
-- 2022.11 - 2023.05: 株式会社ダイニー ※業務委託
+- 2025.08 - 現在: OLTA 株式会社
+- 2023.06 - 2025.08: 株式会社 ダイニー
 - 2021.01 - 2023.05: 株式会社OpenFashion (旧株式会社OMNIS) 
 - 2018.09 - 2020.12: auコマース＆ライフ株式会社
 - 2015.04 - 2018.09: 株式会社アウトソーシングテクノロジー
@@ -31,12 +30,12 @@ description: "Software Engineer Resume"
 ## 技術スタック
 
 ### Application Language
-- Golang, Python, Node.js, Java, PHP, C#
-- TypeScript, JavaScript
+- TypeScript, Golang, Python, 
+- (Java, PHP, C#)
 
 ### Framework
-- Nest.js, go-chi, sql boiler, Django, Spring, Laravel
-- Nest.js, React.js, Vue.js
+- Next.js, Nest.js, go-chi, sql boiler, Django, 
+- Spring, Laravel
 
 
 ### Middleware
@@ -56,7 +55,9 @@ description: "Software Engineer Resume"
 
 ## 職務経歴詳細 (プロパー)
 
-### [株式会社ダイニー (2023/06~現在)](https://www.dinii.jp/)
+### [OLTA 株式会社 (2025/08~)](https://corp.olta.co.jp/)
+
+### [株式会社 ダイニー (2023/06~2025/08)](https://www.dinii.jp/)
 
 **Platform Engineer  (2023/06~現在)**
 
@@ -87,7 +88,7 @@ description: "Software Engineer Resume"
 
 
 
-### [株式会社OpenFashion (旧株式会社OMNIS) (2021/01〜2023/5)](https://www.omnisinc.co/)
+### [株式会社 OpenFashion (旧株式会社OMNIS) (2021/01〜2023/5)](https://www.omnisinc.co/)
 
 **生産管理システムにおけるリードエンジニア**
 
@@ -111,7 +112,7 @@ description: "Software Engineer Resume"
     - React, Vercelを用いたフロントエンド開発
 
 
-### [auコマース&ライフ株式会社（2018/09〜2020/12）](https://www.au-cl.co.jp/)
+### [auコマース&ライフ 株式会社（2018/09〜2020/12）](https://www.au-cl.co.jp/)
 **モール型 EC 事業における分析基盤（DMP）構築**
 
 - モール型 EC 事業における各種企画や、KDDI の広告効果測定を目的とした DMP（Data Management Platform）の構築・運用を担当。
@@ -132,7 +133,7 @@ description: "Software Engineer Resume"
     - AWS、GCP、Terraform を用いた DMP 基盤構築
     - Tableau によるダッシュボード作成およびデータ可視化
 
-### [株式会社アウトソーシングテクノロジー（2015/04〜2018/09）](https://www.ostechnology.co.jp/)
+### [株式会社 アウトソーシングテクノロジー（2015/04〜2018/09）](https://www.ostechnology.co.jp/)
 新卒で入社。開発を中心に設計からテストまで携わり、主にバックエンドを中心に作業を行ってきた。
 受託会社のため案件毎に利用する技術が変わるため、参画した後に円滑に業務が行えるように新しい技術のキャッチアップの仕方を学んだ。
 
@@ -146,7 +147,7 @@ description: "Software Engineer Resume"
 
 
 ## 職務経歴詳細 (業務委託)
-### [株式会社ダイニー (2022/11~2023/05)](https://www.dinii.jp/)
+### [株式会社 ダイニー (2022/11~2023/05)](https://www.dinii.jp/)
 当初はパフォーマンスと安定性を求めたインフラを構築するための採用となっていたが、特定の領域に固定せずフルスタックにタスクを着手した。
 自分のキャリアとしては初めて React Native を用いたモバイルのフロント開発に携わり、フィルタ機能の実装などを行った。
 
@@ -160,7 +161,7 @@ description: "Software Engineer Resume"
     - React Nativeによるモバイル開発
 
 
-### [OLTA株式会社 (2021/12〜現在)](http://corp.olta.co.jp/)
+### [OLTA 株式会社 (2021/12〜2023/11)](http://corp.olta.co.jp/)
 審査情報をDataLakeへ取り込むためのプログラムの作成を行った。
 前任者が作成した類似物があったが、イメージ内部にクラウドの認証情報を持つ作りになっており、コンテナ利用も簡素なものとなっていた。
 そのため今回はdocker-composeを用いたり、必要なバイナリのみをイメージに含めることで、コンテナ周りのナレッジを組織に共有した。
