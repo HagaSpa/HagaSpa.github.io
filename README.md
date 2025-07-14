@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15 and deployed on GitHub Pages. Features a clean, professional design with resume content parsed from Markdown.
 
-First, run the development server:
+## 🚀 Features
+
+- **Static Site Generation**: Optimized for GitHub Pages deployment
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Dynamic Content**: Resume content managed through Markdown with frontmatter
+- **PDF Export**: Generate PDF versions of resume content
+- **Quality Assurance**: Comprehensive linting for both code and content
+- **Japanese Language Support**: Specialized text linting rules
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS with Typography plugin
+- **Content**: Markdown with gray-matter and remark
+- **Language**: TypeScript
+- **Deployment**: GitHub Pages with static export
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- yarn or npm
+
+### Installation
 
 ```bash
-npm run dev
+# Clone the repository
+git clone https://github.com/HagaSpa/HagaSpa.github.io.git
+cd HagaSpa.github.io
+
+# Install dependencies
+yarn install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start development server
+yarn dev
+# or
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-## Learn More
+### Build & Export
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Build for production
+yarn build
+# or
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Export static files
+yarn export
+# or
+npm run export
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Content Management
 
-## Deploy on Vercel
+Resume content is stored in `/contents/resume.md` with frontmatter for metadata. Edit this file to update your portfolio information.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Styling**: Modify Tailwind classes in components
+- **Layout**: Edit components in `/src/components/`
+- **Content**: Update markdown files in `/contents/`
+- **Assets**: Add images to `/public/`
+
+## 🔧 Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Build production version
+- `yarn export` - Export static files
+- `yarn lint` - Run ESLint and text linting
+- `yarn deploy` - Build and prepare for GitHub Pages
+- `yarn build:pdf` - Generate PDF from resume
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── app/           # Next.js App Router pages
+│   └── components/    # React components
+├── contents/          # Markdown content files
+├── public/           # Static assets
+├── pdf-configs/      # PDF generation config
+└── README.md
+```
+
+## 🚀 Deployment
+
+This site is configured for automatic deployment to GitHub Pages. Push to the main branch to trigger deployment.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Feel free to submit issues and pull requests for improvements.
