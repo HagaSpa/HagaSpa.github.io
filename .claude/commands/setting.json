@@ -11,6 +11,7 @@
       "Bash(gh pr create:*)",
       "Bash(gh run list:*)",
       "Bash(gh pr view:*)",
+      "Bash(yarn lint)",
       "WebFetch(domain:github.com)"
     ],
     "deny": []

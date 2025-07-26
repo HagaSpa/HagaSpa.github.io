@@ -8,8 +8,8 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint && yarn lint:text",
-    "lint:text": "textlint docs/README.md",
-    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js",
+    "lint:text": "textlint contents/resume.md",
+    "build:pdf": "md-to-pdf contents/resume.md --config-file ./pdf-configs/config.js",
     "deploy": "npm run build && touch out/.nojekyll"
   },
   "dependencies": {
