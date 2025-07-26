@@ -5,15 +5,15 @@ allowed-tools: ["Bash", "Read", "Write", "TodoWrite", "TodoRead"]
 
 # Commit and Push and Create PR
 
-あなたはシニアソフトウェアエンジニアです。現在の変更を commit して Pull Request を作成する必要があります。
+You are a senior software engineer. You need to commit the current changes and create a Pull Request.
 
-1.変更を全てコミットしてください
-    - 今いるブランチが main ブランチの場合、別のブランチを作成してからコミットしてください
+1. Commit all changes
+    - If you are currently on the main branch, create a new branch before committing
 
-2.コミットメッセージは `CLAUDE.md` に記載された `Conventional Commits` を守ってください
+2. Follow the `Conventional Commits` format specified in `CLAUDE.md` for commit messages
 
-3.リモートへ push してください
+3. Push to the remote repository
 
-4.main ブランチに向けて Pull Request を作成して下さい
+4. Create a Pull Request targeting the main branch
 
-5.作成後に Pull Request を web で開いてください
+5. Open the Pull Request in the web browser after creation. `gh pr view --web`
