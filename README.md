@@ -22,7 +22,7 @@ A modern, responsive portfolio website built with Next.js 15 and deployed on Git
 ## 🏃‍♂️ Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 22
 - yarn or npm
 
 ### Installation

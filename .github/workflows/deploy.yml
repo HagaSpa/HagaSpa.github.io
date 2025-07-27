@@ -25,14 +25,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
+          cache: 'yarn'
+          node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
+
+      - name: Execute Lint
+        run: yarn lint
 
       - name: Build with Next.js
-        run: npm run build
+        run: yarn run build
         env:
           NODE_ENV: production
 
@@ -50,7 +53,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
