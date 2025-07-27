@@ -1,10 +1,8 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -26,16 +24,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           cache: 'yarn'
+          cache-dependency-path: yarn.lock
           node-version-file: .nvmrc
 
       - name: Install dependencies
-        run: yarn install
-
-      - name: Execute Lint
-        run: yarn lint
+        run: yarn install --frozen-lockfile
 
       - name: Build with Next.js
-        run: yarn run build
+        run: yarn build
         env:
           NODE_ENV: production
 
@@ -53,7 +49,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

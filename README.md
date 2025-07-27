@@ -17,7 +17,7 @@ A modern, responsive portfolio website built with Next.js 15 and deployed on Git
 - **Styling**: Tailwind CSS with Typography plugin
 - **Content**: Markdown with gray-matter and remark
 - **Language**: TypeScript
-- **Deployment**: GitHub Pages with static export
+- **Deployment**: GitHub Pages with static export (SSG by next.js)
 
 ## 🏃‍♂️ Getting Started
 
