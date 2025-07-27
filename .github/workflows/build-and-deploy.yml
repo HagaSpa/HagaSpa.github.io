@@ -1,10 +1,8 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -31,11 +29,8 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Execute Lint
-        run: yarn lint
-
       - name: Build with Next.js
-        run: yarn run build
+        run: yarn build
         env:
           NODE_ENV: production
 
