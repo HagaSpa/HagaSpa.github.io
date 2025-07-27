@@ -7,7 +7,6 @@ A modern, responsive portfolio website built with Next.js 15 and deployed on Git
 - **Static Site Generation**: Optimized for GitHub Pages deployment
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Dynamic Content**: Resume content managed through Markdown with frontmatter
-- **PDF Export**: Generate PDF versions of resume content
 - **Quality Assurance**: Comprehensive linting for both code and content
 - **Japanese Language Support**: Specialized text linting rules
 
@@ -81,7 +80,6 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 - `yarn export` - Export static files
 - `yarn lint` - Run ESLint and text linting
 - `yarn deploy` - Build and prepare for GitHub Pages
-- `yarn build:pdf` - Generate PDF from resume
 
 ## 📁 Project Structure
 
@@ -91,7 +89,6 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 │   └── components/    # React components
 ├── contents/          # Markdown content files
 ├── public/           # Static assets
-├── pdf-configs/      # PDF generation config
 └── README.md
 ```
 

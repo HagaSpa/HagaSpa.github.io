@@ -9,20 +9,23 @@ This is a personal resume/portfolio website built with Next.js 15, featuring a s
 ## Key Commands
 
 ### Development
-- `yarn dev` or `npm run dev` - Start development server on localhost:3000
-- `yarn build` or `npm run build` - Build production version
-- `yarn start` or `npm start` - Start production server
-- `yarn export` or `npm run export` - Export static files
+- `yarn dev` - Start development server on localhost:3000
+- `yarn build` - Build production version with Next.js static export
+- `yarn start` - Start production server
 
-### Quality Assurance
-- `yarn lint` or `npm run lint` - Run ESLint and text linting (checks both code and content)
+### Quality Assurance  
+- `yarn lint` - Run ESLint and text linting (checks both code and content)
 - `yarn lint:text` - Run textlint on markdown files (Japanese language rules)
 
-### Deployment
-- `yarn deploy` or `npm run deploy` - Build and prepare for GitHub Pages (creates `.nojekyll`)
+### CI/CD
+- `yarn install --frozen-lockfile` - Install dependencies with exact versions (used in CI)
+- All PRs automatically run lint checks and build verification
+- Main branch automatically deploys to GitHub Pages
 
-### PDF Generation
-- `yarn build:pdf` - Generate PDF from resume markdown using md-to-pdf
+### Deployment
+- `yarn deploy` - Build and prepare for GitHub Pages (creates `.nojekyll`)
+- Automatic deployment via GitHub Actions on push to main branch
+
 
 ## Architecture
 
@@ -31,7 +34,6 @@ This is a personal resume/portfolio website built with Next.js 15, featuring a s
 - `/src/components/` - React components (Sidebar, BrandIcons, type definitions)
 - `/contents/` - Markdown content files (currently `resume.md`)
 - `/public/` - Static assets
-- `/pdf-configs/` - Configuration for PDF generation
 
 ### Core Components
 - **Layout** (`src/app/layout.tsx`) - Root layout with sidebar and main content areas
@@ -64,7 +66,6 @@ Extensive textlint configuration for Japanese content quality, including rules f
 - Configured for static site deployment on GitHub Pages
 - Resume content supports Japanese language with specialized linting rules
 - Images are loaded from external sources (GitHub profile pictures)
-- PDF export capability for resume distribution
 
 ## Pull Request Templates
 ### Japanese/English PR Template
