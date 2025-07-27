@@ -10,7 +10,7 @@ interface ResumeData {
 }
 
 async function getResumeContent() {
-  const filePath = path.join(process.cwd(), "contents/resume.md");
+  const filePath = path.join(process.cwd(), "contents/RESUME.md");
   const fileContents = fs.readFileSync(filePath, "utf8");
   const matterResult = matter(fileContents);
 

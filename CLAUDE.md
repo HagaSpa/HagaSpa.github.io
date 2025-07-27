@@ -32,7 +32,7 @@ This is a personal resume/portfolio website built with Next.js 15, featuring a s
 ### File Structure
 - `/src/app/` - Next.js App Router pages and layouts
 - `/src/components/` - React components (Sidebar, BrandIcons, type definitions)
-- `/contents/` - Markdown content files (currently `resume.md`)
+- `/contents/` - Markdown content files (currently `RESUME.md`)
 - `/public/` - Static assets
 
 ### Core Components
@@ -42,7 +42,7 @@ This is a personal resume/portfolio website built with Next.js 15, featuring a s
 - **BrandIcons** (`src/components/BrandIcons.tsx`) - Custom SVG icons for social platforms
 
 ### Content Management
-Resume content is stored in `/contents/resume.md` with frontmatter for metadata. The file uses gray-matter for parsing and remark for markdown-to-HTML conversion.
+Resume content is stored in `/contents/RESUME.md` with frontmatter for metadata. The file uses gray-matter for parsing and remark for markdown-to-HTML conversion.
 
 ### Styling
 - Tailwind CSS with typography plugin for prose styling

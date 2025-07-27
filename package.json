@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && yarn lint:text",
-    "lint:text": "textlint contents/resume.md"
+    "lint:text": "textlint contents/RESUME.md"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
