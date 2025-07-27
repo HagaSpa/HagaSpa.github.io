@@ -48,19 +48,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-### Build & Export
+### Build
 
 ```bash
-# Build for production
+# Build for production (includes static export)
 yarn build
 # or
 npm run build
-
-# Export static files
-yarn export
-# or
-npm run export
 ```
+
+The build process automatically generates static files in the `out` directory for deployment.
 
 ## 📝 Content Management
 
@@ -76,9 +73,10 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 ## 🔧 Available Scripts
 
 - `yarn dev` - Start development server
-- `yarn build` - Build production version
-- `yarn export` - Export static files
+- `yarn build` - Build production version with static export
+- `yarn start` - Start production server
 - `yarn lint` - Run ESLint and text linting
+- `yarn lint:text` - Run textlint on markdown content
 
 ## 📁 Project Structure
 
