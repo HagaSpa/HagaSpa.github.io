@@ -79,7 +79,6 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 - `yarn build` - Build production version
 - `yarn export` - Export static files
 - `yarn lint` - Run ESLint and text linting
-- `yarn deploy` - Build and prepare for GitHub Pages
 
 ## 📁 Project Structure
 

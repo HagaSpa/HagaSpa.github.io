@@ -12,8 +12,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint && yarn lint:text",
-    "lint:text": "textlint contents/resume.md",
-    "deploy": "npm run build && touch out/.nojekyll"
+    "lint:text": "textlint contents/resume.md"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

@@ -23,8 +23,8 @@ This is a personal resume/portfolio website built with Next.js 15, featuring a s
 - Main branch automatically deploys to GitHub Pages
 
 ### Deployment
-- `yarn deploy` - Build and prepare for GitHub Pages (creates `.nojekyll`)
 - Automatic deployment via GitHub Actions on push to main branch
+- GitHub Pages serves the static site from the `out` directory
 
 
 ## Architecture
