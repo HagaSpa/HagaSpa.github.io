@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Excecute Lint
+      - name: Execute Lint
         run: yarn lint
 
       - name: Build with Next.js
