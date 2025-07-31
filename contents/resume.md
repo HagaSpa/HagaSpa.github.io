@@ -14,16 +14,21 @@ description: "Software Engineer Resume"
 ---
 
 ## 保有スキル
-- アジャイルによるチーム開発のプロジェクトリード経験、メンバーのマネジメント経験
-- TypeScript / Golang / Python / Java / PHP によるバックエンドの開発・設計
-- GCP における監視・アラートの構築と運用
-- Cursor, Claud による実装経験
-- Terraform による IaaC の設計・実装
-- AWS / GCP を用いたデータ分析基盤、 Web アプリ、 バッチ処理のアーキテクチャ構築・設計
-- React / React Native によるフロントエンド・モバイル開発
+### Technology
+- GCP, AWS で稼働する Web サービスに対する SRE 業務
+- GCP, AWS を用いたデータ分析基盤の設計と構築・運用保守
+- Terraform による IaaC の設計・実装・自動化
+- GCP, AWS における監視・アラートの構築と運用
 - Github Actions / Cloud Build を用いた DevOps の構築・設計
 - Docker による開発環境の構築・設計
+- TypeScript / Golang / Python / Java / PHP によるバックエンドの開発・設計
+- React / React Native によるフロントエンド・モバイル開発
 
+### Management
+- アジャイルによるチーム開発のプロジェクトリード経験、メンバーのマネジメント経験
+
+### Other
+- DevRel としてイベントの企画実施・母集団形成・採用活動のリード経験
 
 ---
 
