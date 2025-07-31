@@ -70,7 +70,7 @@ description: "Software Engineer Resume"
 
 ### [株式会社 ダイニー (2023/06~2025/08)](https://www.dinii.jp/)
 
-**Platform Engineer  (2023/06~現在)**
+**Platform Engineer  (2023/06~2025/08)**
 
 - Platform Engineer として、GCP 上で稼働するインフラ基盤の運用・改善を担当。Terraform を用いて GCP リソースを全て Infrastructure as Code (IaC) 化し、構成の統一と運用効率を向上
 
@@ -84,7 +84,8 @@ description: "Software Engineer Resume"
 
 - チーム内外との協働を重視し、インフラ運用に関する知見共有やドキュメント整備を推進
 
-**DevRel (2025/01~現在)**
+**DevRel (2025/01~2025/08)**
+
 - 社内初の DevRel 専任担当として、エンジニア視点を活かした採用広報活動を推進。採用目的の技術イベントや勉強会を自ら企画・実施し、部署横断で組織 OKR の達成に貢献
 
 - エンジニア向け採用ページを構築・公開し、公開後わずか 2 週間で 1,000 PV を達成。企業の技術ブランディング強化に寄与
@@ -99,9 +100,9 @@ description: "Software Engineer Resume"
 
 
 
-### [株式会社 OpenFashion (旧株式会社OMNIS) (2021/01〜2023/5)](https://www.omnisinc.co/)
+### [株式会社 OpenFashion (旧株式会社OMNIS) (2021/01〜2023/05)](https://www.omnisinc.co/)
 
-**生産管理システムにおけるリードエンジニア**
+**Lead Engineer (2021/01~2023/05)**
 
 - ワールドグループに所属するブランド「Original Stitch」の生産管理システムの構築を担当
 
@@ -124,7 +125,8 @@ description: "Software Engineer Resume"
 
 
 ### [auコマース&ライフ 株式会社（2018/09〜2020/12）](https://www.au-cl.co.jp/)
-**モール型 EC 事業における分析基盤（DMP）構築**
+
+**DSG所属 Data Engineer (2018/09~2020/12)**
 
 - モール型 EC 事業における各種企画や、KDDI の広告効果測定を目的とした Data Management Platform（DMP）の構築・運用を担当
 
