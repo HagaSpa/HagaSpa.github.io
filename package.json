@@ -11,7 +11,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint && yarn lint:text",
-    "lint:text": "textlint contents/resume.md"
+    "lint:text": "textlint contents/resume.md",
+    "lint:fix": "textlint --fix contents/resume.md"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

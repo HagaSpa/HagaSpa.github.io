@@ -17,6 +17,7 @@ description: "Software Engineer Resume"
 ### Technology
 - GCP, AWS で稼働する Web サービスに対する SRE 業務
 - GCP, AWS を用いたデータ分析基盤の設計と構築・運用保守
+- Curor, Claude Code による AI エージェントを用いた開発経験
 - Terraform による IaaC の設計・実装・自動化
 - GCP, AWS における監視・アラートの構築と運用
 - Github Actions / Cloud Build を用いた DevOps の構築・設計
@@ -64,6 +65,8 @@ description: "Software Engineer Resume"
 ## 職務経歴詳細 (プロパー)
 
 ### [OLTA 株式会社 (2025/08~)](https://corp.olta.co.jp/)
+
+**CTO室 SRE (2025/08~)**
 
 ### [株式会社 ダイニー (2023/06~2025/08)](https://www.dinii.jp/)
 
@@ -156,11 +159,23 @@ description: "Software Engineer Resume"
 
 ## 職務経歴詳細 (業務委託)
 
+### [seirin and company 合同会社 (2025/08~)](https://seirin-company.com/)
+
+**技術顧問 (2025/08~)**
+
+技術顧問として、開発組織全体に対するコンサル業務。AI による開発フローのナレッジシェア。
+
 ### [株式会社 TENHO (2025/07~)](https://tenho7.jp/)
+
+**SRE (2025/07~)**
+
 2025/07 からデータ基盤構築 PJ に SRE として参画。AWS Aurora から BigQuery へのデータ転送を TROCCO を用いて行う予定。
 
 
 ### [株式会社 ダイニー (2022/11~2023/05)](https://www.dinii.jp/)
+
+**Platform Engineer (2022/11~2024/05)**
+
 当初はパフォーマンスと安定性を求めたインフラを構築するための採用となっていたが、特定の領域を固定せずフルスタックでタスクを着手した。
 自分のキャリアとしては初めて React Native を用いたモバイルのフロント開発に携わり、フィルタ機能の実装などを行った。
 
@@ -174,7 +189,10 @@ description: "Software Engineer Resume"
     - React Native によるモバイル開発
 
 
-### [OLTA 株式会社 (2021/12〜2023/11)](http://corp.olta.co.jp/)
+### [OLTA 株式会社 (2021/12〜2025/08)](http://corp.olta.co.jp/)
+
+**Data Engineer (2021/12~2025/08)**
+
 審査情報を DataLake へ取り込むためのプログラムを作成した。
 前任者による類似物はあったが、イメージ内部にクラウドの認証情報を持つ作りになっており、コンテナ利用も簡素なものとなっていた。
 そのため今回は docker-compose を用いたり、必要なバイナリのみをイメージに含めることで、コンテナ周りのナレッジを組織に共有した。
