@@ -24,20 +24,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: 'yarn'
-          cache-dependency-path: yarn.lock
-          node-version-file: .nvmrc
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
-      - name: Build with Next.js
-        run: yarn build
-        env:
-          NODE_ENV: production
+      - name: Build with Astro
+        run: bun run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -45,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
@@ -56,4 +50,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4

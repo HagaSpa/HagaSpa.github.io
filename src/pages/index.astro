@@ -1,0 +1,13 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const resumes = await getCollection('resume');
+const entry = resumes[0];
+const { Content } = await render(entry);
+---
+<Layout title={entry.data.title} description={entry.data.description}>
+  <article class="prose prose-slate dark:prose-invert max-w-none">
+    <Content />
+  </article>
+</Layout>
