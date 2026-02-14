@@ -1,13 +1,23 @@
 ---
-import { getCollection, render } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-
-const resumes = await getCollection('resume');
-const entry = resumes[0];
-const { Content } = await render(entry);
+import HeroSection from '../components/HeroSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import SkillsSection from '../components/SkillsSection.astro';
+import ExperienceSection from '../components/ExperienceSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { siteConfig, footer } from '../data/ja';
 ---
-<Layout title={entry.data.title} description={entry.data.description}>
-  <article class="prose prose-slate dark:prose-invert max-w-none">
-    <Content />
-  </article>
+<Layout title={`${siteConfig.name} - ${siteConfig.title}`} description={siteConfig.description}>
+  <HeroSection />
+  <div class="h-px bg-border" />
+  <AboutSection />
+  <div class="h-px bg-border" />
+  <SkillsSection />
+  <div class="h-px bg-border" />
+  <ExperienceSection />
+  <div class="h-px bg-border" />
+  <ContactSection />
+  <footer class="py-12 text-center text-xs text-muted font-mono">
+    {footer.text}
+  </footer>
 </Layout>

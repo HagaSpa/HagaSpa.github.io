@@ -1,0 +1,31 @@
+---
+import { ArrowUpRight } from '@lucide/astro';
+import { socialLinks, contact } from '../data/ja';
+---
+<section id="contact" class="py-20">
+  <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">
+    // Contact
+  </h2>
+  <div class="grid md:grid-cols-[200px_1fr] gap-8">
+    <div class="text-sm text-muted font-mono">Get in touch</div>
+    <div class="flex flex-col gap-3">
+      <p class="text-foreground leading-relaxed mb-4">{contact.message}</p>
+      <div class="flex flex-col gap-3">
+        {socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target={link.icon === 'mail' ? undefined : '_blank'}
+            rel={link.icon === 'mail' ? undefined : 'noopener noreferrer'}
+            class="group inline-flex items-center justify-between py-2 border-b border-border hover:border-primary transition-colors"
+          >
+            <span class="text-sm text-muted font-mono">{link.label}</span>
+            <span class="flex items-center gap-1.5 text-sm text-foreground group-hover:text-primary transition-colors">
+              {link.value}
+              <ArrowUpRight class="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

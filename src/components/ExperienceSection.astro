@@ -1,0 +1,73 @@
+---
+import { ExternalLink } from '@lucide/astro';
+import { experiences, contractWork } from '../data/ja';
+---
+<section id="experience" class="py-20">
+  <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">
+    // Experience
+  </h2>
+
+  <h3 class="text-xs font-mono text-muted uppercase tracking-wider mb-8">Full-time</h3>
+  <div class="flex flex-col gap-12">
+    {experiences.map((exp) => (
+      <div class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8 group">
+        <div class="text-sm text-muted font-mono pt-1">{exp.period}</div>
+        <div class="flex flex-col gap-3">
+          <div>
+            <a
+              href={exp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-foreground font-semibold group-hover:text-primary transition-colors"
+            >
+              {exp.title}
+              <span class="text-muted">·</span>
+              {exp.company}
+              <ExternalLink class="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+            </a>
+          </div>
+          <p class="text-muted leading-relaxed text-sm">{exp.description}</p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            {exp.technologies.map((tech) => (
+              <span class="px-2.5 py-1 text-xs font-mono rounded-sm bg-primary-10 text-primary">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <h3 class="text-xs font-mono text-muted uppercase tracking-wider mb-8 mt-16">Contract</h3>
+  <div class="flex flex-col gap-12">
+    {contractWork.map((exp) => (
+      <div class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8 group">
+        <div class="text-sm text-muted font-mono pt-1">{exp.period}</div>
+        <div class="flex flex-col gap-3">
+          <div>
+            <a
+              href={exp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-foreground font-semibold group-hover:text-primary transition-colors"
+            >
+              {exp.title}
+              <span class="text-muted">·</span>
+              {exp.company}
+              <ExternalLink class="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+            </a>
+          </div>
+          <p class="text-muted leading-relaxed text-sm">{exp.description}</p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            {exp.technologies.map((tech) => (
+              <span class="px-2.5 py-1 text-xs font-mono rounded-sm bg-primary-10 text-primary">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

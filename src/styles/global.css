@@ -6,7 +6,7 @@
     @slot;
   }
   @media (prefers-color-scheme: dark) {
-    &:where(:not(.light *)) {
+    &:where(:not(.light, .light *)) {
       @slot;
     }
   }
@@ -14,23 +14,43 @@
 
 @theme {
   --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-background: #ffffff;
+  --color-foreground: hsl(220 20% 15%);
+  --color-primary: hsl(166 56% 38%);
+  --color-primary-10: hsl(166 56% 38% / 0.1);
+  --color-muted: hsl(210 10% 55%);
+  --color-secondary: hsl(220 14% 95%);
+  --color-secondary-foreground: hsl(210 15% 40%);
+  --color-border: hsl(220 12% 88%);
 }
 
-.resume-content h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--color-slate-200);
-  padding-bottom: 0.5rem;
-}
-
-:where(.dark, .dark *) .resume-content h2 {
-  border-bottom-color: var(--color-slate-700);
+/* Dark theme overrides */
+:where(.dark, .dark *) {
+  --color-background: hsl(220 20% 7%);
+  --color-foreground: hsl(210 20% 90%);
+  --color-primary: hsl(166 56% 55%);
+  --color-primary-10: hsl(166 56% 55% / 0.1);
+  --color-muted: hsl(210 10% 50%);
+  --color-secondary: hsl(220 14% 14%);
+  --color-secondary-foreground: hsl(210 15% 70%);
+  --color-border: hsl(220 12% 18%);
 }
 
 @media (prefers-color-scheme: dark) {
-  :where(:not(.light *)) .resume-content h2 {
-    border-bottom-color: var(--color-slate-700);
+  :where(:not(.light, .light *)) {
+    --color-background: hsl(220 20% 7%);
+    --color-foreground: hsl(210 20% 90%);
+    --color-primary: hsl(166 56% 55%);
+    --color-primary-10: hsl(166 56% 55% / 0.1);
+    --color-muted: hsl(210 10% 50%);
+    --color-secondary: hsl(220 14% 14%);
+    --color-secondary-foreground: hsl(210 15% 70%);
+    --color-border: hsl(220 12% 18%);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

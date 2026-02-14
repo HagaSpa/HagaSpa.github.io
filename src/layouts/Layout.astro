@@ -2,8 +2,10 @@
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
-import Sidebar from '../components/Sidebar.astro';
+import SideNav from '../components/SideNav.astro';
 
 interface Props {
   title: string;
@@ -27,12 +29,10 @@ const { title, description } = Astro.props;
   <meta name="description" content={description} />
   <link rel="icon" href="/favicon.ico" />
 </head>
-<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors">
-  <div class="flex flex-col lg:flex-row min-h-screen">
-    <Sidebar />
-    <main class="flex-1 p-8">
-      <slot />
-    </main>
-  </div>
+<body class="bg-background text-foreground antialiased">
+  <SideNav />
+  <main class="lg:ml-[280px] px-6 md:px-12 lg:px-16 py-8 max-w-3xl">
+    <slot />
+  </main>
 </body>
 </html>

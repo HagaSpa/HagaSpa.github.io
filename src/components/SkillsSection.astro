@@ -1,0 +1,22 @@
+---
+import { skills } from '../data/ja';
+---
+<section id="skills" class="py-20">
+  <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">
+    // Skills
+  </h2>
+  <div class="flex flex-col gap-10">
+    {skills.map((category) => (
+      <div class="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8">
+        <div class="text-sm text-muted font-mono">{category.label}</div>
+        <div class="flex flex-wrap gap-2">
+          {category.items.map((skill) => (
+            <span class="px-3 py-1.5 text-sm font-mono rounded-sm bg-secondary text-secondary-foreground border border-border hover:border-primary hover:text-primary transition-colors">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

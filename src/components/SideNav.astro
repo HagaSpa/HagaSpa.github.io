@@ -1,0 +1,78 @@
+---
+import { Github, Mail, Globe } from '@lucide/astro';
+import NavLinks from './NavLinks.astro';
+import { siteConfig, socialLinks } from '../data/ja';
+---
+<aside class="hidden lg:flex fixed top-0 left-0 h-screen w-[280px] flex-col justify-between px-10 py-16 z-10">
+  <div class="flex flex-col gap-10">
+    <div class="flex items-center justify-between">
+      <div>
+        <a href="#" class="text-lg font-bold text-foreground hover:text-primary transition-colors">
+          {siteConfig.initials}
+        </a>
+        <p class="text-xs text-muted font-mono mt-1">{siteConfig.title}</p>
+      </div>
+      <button
+        id="theme-toggle"
+        type="button"
+        class="p-2 rounded-lg text-muted hover:text-primary transition-colors"
+        aria-label="Toggle theme"
+      >
+        <svg id="sun-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="moon-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+    </div>
+    <NavLinks />
+  </div>
+
+  <div class="flex items-center gap-4">
+    {socialLinks.map((link) => (
+      <a
+        href={link.href}
+        target={link.icon === 'mail' ? undefined : '_blank'}
+        rel={link.icon === 'mail' ? undefined : 'noopener noreferrer'}
+        class="text-muted hover:text-primary transition-colors"
+        aria-label={link.label}
+      >
+        {link.icon === 'github' && <Github class="h-4 w-4" />}
+        {link.icon === 'twitter' && (
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+          </svg>
+        )}
+        {link.icon === 'mail' && <Mail class="h-4 w-4" />}
+        {link.icon === 'globe' && <Globe class="h-4 w-4" />}
+      </a>
+    ))}
+  </div>
+</aside>
+
+<script>
+  const toggle = document.getElementById('theme-toggle')!;
+  const sunIcon = document.getElementById('sun-icon')!;
+  const moonIcon = document.getElementById('moon-icon')!;
+
+  const isDark = (): boolean =>
+    document.documentElement.classList.contains('dark') ||
+    (!document.documentElement.classList.contains('light') &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  const updateIcons = (): void => {
+    sunIcon.classList.toggle('hidden', !isDark());
+    moonIcon.classList.toggle('hidden', isDark());
+  };
+
+  toggle.addEventListener('click', () => {
+    const wasDark = isDark();
+    document.documentElement.classList.toggle('dark', !wasDark);
+    document.documentElement.classList.toggle('light', wasDark);
+    localStorage.setItem('theme', wasDark ? 'light' : 'dark');
+    updateIcons();
+  });
+
+  updateIcons();
+</script>
