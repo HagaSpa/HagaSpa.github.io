@@ -1,0 +1,106 @@
+---
+import { Github, Mail, Globe } from '@lucide/astro';
+import XIcon from './XIcon.astro';
+import NavLinks from './NavLinks.astro';
+import type { SiteConfig, SocialLink, NavItem } from '../data/types';
+
+interface Props {
+  siteConfig: SiteConfig;
+  socialLinks: SocialLink[];
+  navItems: NavItem[];
+  lang: 'ja' | 'en';
+}
+const { siteConfig, socialLinks, navItems, lang } = Astro.props;
+---
+<aside class="hidden lg:flex fixed top-0 left-0 h-screen w-[280px] flex-col justify-between px-10 py-16 z-10">
+  <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 text-xs font-mono">
+          <a
+            href="/"
+            class:list={[
+              'px-1.5 py-0.5 rounded transition-colors',
+              lang === 'ja' ? 'text-primary' : 'text-muted hover:text-foreground',
+            ]}
+          >JA</a>
+          <span class="text-border">/</span>
+          <a
+            href="/en/"
+            class:list={[
+              'px-1.5 py-0.5 rounded transition-colors',
+              lang === 'en' ? 'text-primary' : 'text-muted hover:text-foreground',
+            ]}
+          >EN</a>
+        </div>
+        <button
+          id="theme-toggle"
+          type="button"
+          class="p-1 rounded-lg text-muted hover:text-primary transition-colors"
+          aria-label="Toggle theme"
+        >
+          <svg id="sun-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg id="moon-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+      <div>
+        <a href={lang === 'ja' ? '/' : '/en/'} class="text-lg font-bold text-foreground hover:text-primary transition-colors">
+          {siteConfig.displayName}
+        </a>
+        <p class="text-xs text-muted font-mono mt-1">{siteConfig.title}</p>
+      </div>
+    </div>
+    <NavLinks navItems={navItems} />
+  </div>
+
+  <div class="flex items-center gap-4">
+    {socialLinks.map((link) => (
+      <a
+        href={link.href}
+        target={link.icon === 'mail' ? undefined : '_blank'}
+        rel={link.icon === 'mail' ? undefined : 'noopener noreferrer'}
+        class="text-muted hover:text-primary transition-colors"
+        aria-label={link.label}
+      >
+        {link.icon === 'github' && <Github class="h-4 w-4" />}
+        {link.icon === 'twitter' && <XIcon />}
+        {link.icon === 'mail' && <Mail class="h-4 w-4" />}
+        {link.icon === 'globe' && <Globe class="h-4 w-4" />}
+      </a>
+    ))}
+  </div>
+</aside>
+
+<script>
+  const isDark = (): boolean =>
+    document.documentElement.classList.contains('dark') ||
+    (!document.documentElement.classList.contains('light') &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  const sunIcons = document.querySelectorAll<SVGElement>('[id$="sun-icon"]');
+  const moonIcons = document.querySelectorAll<SVGElement>('[id$="moon-icon"]');
+
+  const updateIcons = (): void => {
+    const dark = isDark();
+    sunIcons.forEach((el) => el.classList.toggle('hidden', !dark));
+    moonIcons.forEach((el) => el.classList.toggle('hidden', dark));
+  };
+
+  const toggleTheme = (): void => {
+    const wasDark = isDark();
+    document.documentElement.classList.toggle('dark', !wasDark);
+    document.documentElement.classList.toggle('light', wasDark);
+    localStorage.setItem('theme', wasDark ? 'light' : 'dark');
+    updateIcons();
+  };
+
+  document.querySelectorAll('[id$="theme-toggle"]').forEach((btn) => {
+    btn.addEventListener('click', toggleTheme);
+  });
+
+  updateIcons();
+</script>

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.0",
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^0.525.0",
     "astro": "^5.0.0"
   },

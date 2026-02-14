@@ -1,0 +1,41 @@
+---
+import { Github, Mail, Globe } from '@lucide/astro';
+import XIcon from './XIcon.astro';
+import type { SiteConfig, SocialLink } from '../data/types';
+
+interface Props {
+  siteConfig: SiteConfig;
+  socialLinks: SocialLink[];
+}
+const { siteConfig, socialLinks } = Astro.props;
+---
+<section id="hero" class="min-h-[90vh] flex flex-col justify-center">
+  <div class="flex flex-col gap-6">
+    <p class="font-mono text-sm text-primary tracking-wider">
+      // {siteConfig.title}
+    </p>
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground text-balance">
+      {siteConfig.name}
+    </h1>
+    <p class="text-lg md:text-xl text-muted max-w-2xl leading-relaxed">
+      {siteConfig.description}
+    </p>
+
+    <div class="flex items-center gap-5 pt-4">
+      {socialLinks.map((link) => (
+        <a
+          href={link.href}
+          target={link.icon === 'mail' ? undefined : '_blank'}
+          rel={link.icon === 'mail' ? undefined : 'noopener noreferrer'}
+          class="text-muted hover:text-primary transition-colors"
+          aria-label={link.label}
+        >
+          {link.icon === 'github' && <Github class="h-5 w-5" />}
+          {link.icon === 'twitter' && <XIcon class="h-5 w-5" />}
+          {link.icon === 'mail' && <Mail class="h-5 w-5" />}
+          {link.icon === 'globe' && <Globe class="h-5 w-5" />}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

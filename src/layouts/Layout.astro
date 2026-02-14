@@ -2,16 +2,23 @@
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
 import '../styles/global.css';
-import Sidebar from '../components/Sidebar.astro';
+import SideNav from '../components/SideNav.astro';
+import type { SiteConfig, SocialLink, NavItem } from '../data/types';
 
 interface Props {
   title: string;
   description: string;
+  lang: 'ja' | 'en';
+  siteConfig: SiteConfig;
+  socialLinks: SocialLink[];
+  navItems: NavItem[];
 }
-const { title, description } = Astro.props;
+const { title, description, lang, siteConfig, socialLinks, navItems } = Astro.props;
 ---
-<html lang="ja">
+<html lang={lang}>
 <head>
   <script is:inline>
     (function(){
@@ -27,12 +34,48 @@ const { title, description } = Astro.props;
   <meta name="description" content={description} />
   <link rel="icon" href="/favicon.ico" />
 </head>
-<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors">
-  <div class="flex flex-col lg:flex-row min-h-screen">
-    <Sidebar />
-    <main class="flex-1 p-8">
-      <slot />
-    </main>
-  </div>
+<body class="bg-background text-foreground antialiased">
+  <!-- Mobile header -->
+  <header class="lg:hidden fixed top-0 left-0 right-0 z-20 flex items-center justify-between px-6 py-3 bg-background/80 backdrop-blur-sm border-b border-border">
+    <a href={lang === 'ja' ? '/' : '/en/'} class="text-sm font-bold text-foreground">
+      {siteConfig.displayName}
+    </a>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1 text-xs font-mono">
+        <a
+          href="/"
+          class:list={[
+            'px-1.5 py-0.5 rounded transition-colors',
+            lang === 'ja' ? 'text-primary' : 'text-muted hover:text-foreground',
+          ]}
+        >JA</a>
+        <span class="text-border">/</span>
+        <a
+          href="/en/"
+          class:list={[
+            'px-1.5 py-0.5 rounded transition-colors',
+            lang === 'en' ? 'text-primary' : 'text-muted hover:text-foreground',
+          ]}
+        >EN</a>
+      </div>
+      <button
+        id="mobile-theme-toggle"
+        type="button"
+        class="p-1 rounded-lg text-muted hover:text-primary transition-colors"
+        aria-label="Toggle theme"
+      >
+        <svg id="mobile-sun-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="mobile-moon-icon" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <SideNav siteConfig={siteConfig} socialLinks={socialLinks} navItems={navItems} lang={lang} />
+  <main class="lg:ml-[280px] px-6 md:px-12 lg:px-16 pt-16 lg:pt-8 pb-8 max-w-3xl">
+    <slot />
+  </main>
 </body>
 </html>

@@ -1,0 +1,58 @@
+---
+import type { NavItem } from '../data/types';
+
+interface Props {
+  navItems: NavItem[];
+}
+const { navItems } = Astro.props;
+---
+<nav class="hidden lg:flex flex-col gap-3" aria-label="Page navigation">
+  {navItems.map((item) => (
+    <a
+      href={item.href}
+      data-nav-link={item.href.slice(1)}
+      class="flex items-center gap-3 text-xs font-mono uppercase tracking-wider transition-colors text-muted hover:text-foreground"
+    >
+      <span
+        data-nav-line
+        class="block h-px w-8 bg-muted/40 transition-all"
+      />
+      {item.label}
+    </a>
+  ))}
+</nav>
+
+<script>
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('[data-nav-link]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            const isActive = link.dataset.navLink === id;
+            const line = link.querySelector<HTMLSpanElement>('[data-nav-line]');
+            if (!line) return;
+            if (isActive) {
+              link.classList.remove('text-muted', 'hover:text-foreground');
+              link.classList.add('text-primary');
+              line.classList.remove('w-8', 'bg-muted/40');
+              line.classList.add('w-16', 'bg-primary');
+            } else {
+              link.classList.add('text-muted', 'hover:text-foreground');
+              link.classList.remove('text-primary');
+              line.classList.add('w-8', 'bg-muted/40');
+              line.classList.remove('w-16', 'bg-primary');
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -50% 0px' }
+  );
+
+  document.querySelectorAll('section[id]').forEach((section) => {
+    observer.observe(section);
+  });
+</script>
