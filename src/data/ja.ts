@@ -1,61 +1,27 @@
-export const siteConfig = {
+import type { SiteConfig, Experience, Contact, Footer, NavItem } from './types';
+
+export const siteConfig: SiteConfig = {
   name: 'HagaSpa',
   initials: 'Yuto Haga',
   title: 'Platform / Data / Fullstack',
   description:
     'インフラ領域を得意とし、GCP / AWS 上の Platform Engineering や Data Engineering を専門としています。開発はフロントエンドからインフラまで全領域を担当できます。開発効率化や全社展開など、組織を横断して世の中や会社にインパクトを残す事が好きです。',
-  lang: 'ja' as const,
+  lang: 'ja',
 };
 
-export const socialLinks = [
-  { label: 'GitHub', value: 'HagaSpa', href: 'https://github.com/hagaspa', icon: 'github' as const },
-  { label: 'X', value: 'haga_spa', href: 'https://x.com/haga_spa', icon: 'twitter' as const },
-  { label: 'Email', value: 'justicesparrow@gmail.com', href: 'mailto:justicesparrow@gmail.com', icon: 'mail' as const },
-  { label: 'Web', value: 'hagaspa.com', href: 'https://hagaspa.com', icon: 'globe' as const },
+export const navItems: NavItem[] = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Contact', href: '#contact' },
 ];
 
-export const about = [
+export const about: string[] = [
   '2015年から Web に関する開発と運用に従事。現在は OLTA 株式会社の CTO 室で Platform Engineer / Data Engineer として活動中。',
   '開発者体験の向上、パフォーマンス最適化、サービスの安定性向上、効率化に情熱を注いでいる。',
   'アジャイルによるチーム開発のプロジェクトリード、DevRel としてイベントの企画実施・採用活動のリード、SaaS の全社導入推進などの非技術領域の経験も保有。',
   '趣味は Street Fighter 6 を競技として続けている。',
 ];
-
-export const skills = [
-  {
-    label: 'Languages',
-    items: ['TypeScript', 'Golang', 'Python', 'JavaScript', 'Java', 'PHP', 'C#'],
-  },
-  {
-    label: 'Frontend',
-    items: ['Next.js', 'Vue.js', 'React Native', 'Astro'],
-  },
-  {
-    label: 'Backend',
-    items: ['Nest.js', 'Django', 'go-chi', 'sqlboiler', 'Spring', 'Laravel'],
-  },
-  {
-    label: 'Infrastructure',
-    items: ['GKE', 'Cloud Run', 'Terraform', 'Docker', 'ArgoCD', 'GitHub Actions', 'Cloud Build'],
-  },
-  {
-    label: 'Data',
-    items: ['BigQuery', 'PostgreSQL', 'MySQL', 'Looker', 'dbt', 'Tableau', 'Hasura'],
-  },
-  {
-    label: 'Tools',
-    items: ['Claude Code', 'Cursor', 'Ghostty', 'tmux', 'Raycast', 'karabiner-elements', 'mise', 'Shottr', 'fzf', 'lsd', 'sheldon', 'starship', 'atuin', 'gh', 'git-delta', 'zoxide', 'bat'],
-  },
-];
-
-export interface Experience {
-  period: string;
-  title: string;
-  company: string;
-  url: string;
-  description: string;
-  technologies: string[];
-}
 
 export const experiences: Experience[] = [
   {
@@ -142,10 +108,10 @@ export const contractWork: Experience[] = [
   },
 ];
 
-export const contact = {
+export const contact: Contact = {
   message: 'お仕事のご相談やカジュアルな情報交換など、お気軽にご連絡ください。',
 };
 
-export const footer = {
+export const footer: Footer = {
   text: '© 2026 HagaSpa. Built with Astro & TypeScript.',
 };

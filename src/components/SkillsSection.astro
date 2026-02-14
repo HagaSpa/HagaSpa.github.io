@@ -1,5 +1,10 @@
 ---
-import { skills } from '../data/ja';
+import type { SkillCategory } from '../data/types';
+
+interface Props {
+  skills: SkillCategory[];
+}
+const { skills } = Astro.props;
 ---
 <section id="skills" class="py-20">
   <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">

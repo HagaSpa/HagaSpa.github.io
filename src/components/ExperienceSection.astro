@@ -1,6 +1,12 @@
 ---
 import { ExternalLink } from '@lucide/astro';
-import { experiences, contractWork } from '../data/ja';
+import type { Experience } from '../data/types';
+
+interface Props {
+  experiences: Experience[];
+  contractWork: Experience[];
+}
+const { experiences, contractWork } = Astro.props;
 ---
 <section id="experience" class="py-20">
   <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">

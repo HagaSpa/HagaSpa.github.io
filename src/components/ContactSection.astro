@@ -1,6 +1,12 @@
 ---
 import { ArrowUpRight } from '@lucide/astro';
-import { socialLinks, contact } from '../data/ja';
+import type { SocialLink, Contact } from '../data/types';
+
+interface Props {
+  socialLinks: SocialLink[];
+  contact: Contact;
+}
+const { socialLinks, contact } = Astro.props;
 ---
 <section id="contact" class="py-20">
   <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">
