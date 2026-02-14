@@ -47,11 +47,18 @@ const { siteConfig, socialLinks, navItems, lang } = Astro.props;
           </svg>
         </button>
       </div>
-      <div>
-        <a href={lang === 'ja' ? '/' : '/en/'} class="text-lg font-bold text-foreground hover:text-primary transition-colors">
-          {siteConfig.displayName}
-        </a>
-        <p class="text-xs text-muted font-mono mt-1">{siteConfig.title}</p>
+      <div class="flex items-center gap-3">
+        <img
+          src="/profile-favicon.png"
+          alt={siteConfig.displayName}
+          class="w-10 h-10 rounded-full object-cover ring-1 ring-border"
+        />
+        <div>
+          <a href={lang === 'ja' ? '/' : '/en/'} class="text-lg font-bold text-foreground hover:text-primary transition-colors">
+            {siteConfig.displayName}
+          </a>
+          <p class="text-xs text-muted font-mono mt-1">{siteConfig.title}</p>
+        </div>
       </div>
     </div>
     <NavLinks navItems={navItems} />
