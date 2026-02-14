@@ -5,15 +5,16 @@ import type { SocialLink, Contact } from '../data/types';
 interface Props {
   socialLinks: SocialLink[];
   contact: Contact;
+  getInTouchLabel: string;
 }
-const { socialLinks, contact } = Astro.props;
+const { socialLinks, contact, getInTouchLabel } = Astro.props;
 ---
 <section id="contact" class="py-20">
   <h2 class="font-mono text-sm text-primary tracking-wider uppercase mb-10">
     // Contact
   </h2>
   <div class="grid md:grid-cols-[200px_1fr] gap-8">
-    <div class="text-sm text-muted font-mono">Get in touch</div>
+    <div class="text-sm text-muted font-mono">{getInTouchLabel}</div>
     <div class="flex flex-col gap-3">
       <p class="text-foreground leading-relaxed mb-4">{contact.message}</p>
       <div class="flex flex-col gap-3">

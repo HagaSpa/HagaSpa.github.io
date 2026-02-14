@@ -1,8 +1,8 @@
-import type { SiteConfig, Experience, Contact, Footer, NavItem } from './types';
+import type { SiteConfig, Experience, Contact, Footer, NavItem, SectionLabels } from './types';
 
 export const siteConfig: SiteConfig = {
   name: 'HagaSpa',
-  initials: 'Yuto Haga',
+  displayName: 'Yuto Haga',
   title: 'Platform / Data / Fullstack',
   description:
     'Specializing in Platform Engineering and Data Engineering on GCP / AWS. Capable of handling all areas from frontend to infrastructure. Passionate about driving efficiency improvements and company-wide initiatives that create impact across organizations.',
@@ -107,6 +107,13 @@ export const contractWork: Experience[] = [
     technologies: ['TypeScript', 'Terraform', 'React Native'],
   },
 ];
+
+export const sectionLabels: SectionLabels = {
+  aboutProfile: 'Profile',
+  experienceFullTime: 'Full-time',
+  experienceContract: 'Contract',
+  contactGetInTouch: 'Get in touch',
+};
 
 export const contact: Contact = {
   message: 'Feel free to reach out for work inquiries or casual tech conversations.',

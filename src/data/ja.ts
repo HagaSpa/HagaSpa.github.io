@@ -1,8 +1,8 @@
-import type { SiteConfig, Experience, Contact, Footer, NavItem } from './types';
+import type { SiteConfig, Experience, Contact, Footer, NavItem, SectionLabels } from './types';
 
 export const siteConfig: SiteConfig = {
   name: 'HagaSpa',
-  initials: 'Yuto Haga',
+  displayName: 'Yuto Haga',
   title: 'Platform / Data / Fullstack',
   description:
     'インフラ領域を得意とし、GCP / AWS 上の Platform Engineering や Data Engineering を専門としています。開発はフロントエンドからインフラまで全領域を担当できます。開発効率化や全社展開など、組織を横断して世の中や会社にインパクトを残す事が好きです。',
@@ -107,6 +107,13 @@ export const contractWork: Experience[] = [
     technologies: ['TypeScript', 'Terraform', 'React Native'],
   },
 ];
+
+export const sectionLabels: SectionLabels = {
+  aboutProfile: 'プロフィール',
+  experienceFullTime: '正社員',
+  experienceContract: '業務委託',
+  contactGetInTouch: 'お問い合わせ',
+};
 
 export const contact: Contact = {
   message: 'お仕事のご相談やカジュアルな情報交換など、お気軽にご連絡ください。',

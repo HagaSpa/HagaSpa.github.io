@@ -1,6 +1,6 @@
 export interface SiteConfig {
   name: string;
-  initials: string;
+  displayName: string;
   title: string;
   description: string;
   lang: 'ja' | 'en';
@@ -25,6 +25,13 @@ export interface Experience {
   url: string;
   description: string;
   technologies: string[];
+}
+
+export interface SectionLabels {
+  aboutProfile: string;
+  experienceFullTime: string;
+  experienceContract: string;
+  contactGetInTouch: string;
 }
 
 export interface Contact {

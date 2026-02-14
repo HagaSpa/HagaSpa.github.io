@@ -1,0 +1,38 @@
+---
+import HeroSection from './HeroSection.astro';
+import AboutSection from './AboutSection.astro';
+import SkillsSection from './SkillsSection.astro';
+import ExperienceSection from './ExperienceSection.astro';
+import ContactSection from './ContactSection.astro';
+import type { SiteConfig, SocialLink, SkillCategory, Experience, SectionLabels, Contact, Footer } from '../data/types';
+
+interface Props {
+  siteConfig: SiteConfig;
+  socialLinks: SocialLink[];
+  skills: SkillCategory[];
+  about: string[];
+  experiences: Experience[];
+  contractWork: Experience[];
+  sectionLabels: SectionLabels;
+  contact: Contact;
+  footer: Footer;
+}
+const { siteConfig, socialLinks, skills, about, experiences, contractWork, sectionLabels, contact, footer } = Astro.props;
+---
+<HeroSection siteConfig={siteConfig} socialLinks={socialLinks} />
+<div class="h-px bg-border" />
+<AboutSection about={about} profileLabel={sectionLabels.aboutProfile} />
+<div class="h-px bg-border" />
+<SkillsSection skills={skills} />
+<div class="h-px bg-border" />
+<ExperienceSection
+  experiences={experiences}
+  contractWork={contractWork}
+  fullTimeLabel={sectionLabels.experienceFullTime}
+  contractLabel={sectionLabels.experienceContract}
+/>
+<div class="h-px bg-border" />
+<ContactSection socialLinks={socialLinks} contact={contact} getInTouchLabel={sectionLabels.contactGetInTouch} />
+<footer class="py-12 text-center text-xs text-muted font-mono">
+  {footer.text}
+</footer>

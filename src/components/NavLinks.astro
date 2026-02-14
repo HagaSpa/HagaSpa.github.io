@@ -24,16 +24,16 @@ const { navItems } = Astro.props;
 
 <script>
   const navLinks = document.querySelectorAll<HTMLAnchorElement>('[data-nav-link]');
-  const navLines = document.querySelectorAll<HTMLSpanElement>('[data-nav-line]');
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          navLinks.forEach((link, i) => {
+          navLinks.forEach((link) => {
             const isActive = link.dataset.navLink === id;
-            const line = navLines[i];
+            const line = link.querySelector<HTMLSpanElement>('[data-nav-line]');
+            if (!line) return;
             if (isActive) {
               link.classList.remove('text-muted', 'hover:text-foreground');
               link.classList.add('text-primary');

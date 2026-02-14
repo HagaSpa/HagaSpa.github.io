@@ -1,11 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import AboutSection from '../components/AboutSection.astro';
-import SkillsSection from '../components/SkillsSection.astro';
-import ExperienceSection from '../components/ExperienceSection.astro';
-import ContactSection from '../components/ContactSection.astro';
-import { siteConfig, navItems, about, experiences, contractWork, contact, footer } from '../data/ja';
+import PageContent from '../components/PageContent.astro';
+import { siteConfig, navItems, about, experiences, contractWork, sectionLabels, contact, footer } from '../data/ja';
 import { socialLinks, skills } from '../data/shared';
 ---
 <Layout
@@ -16,16 +12,15 @@ import { socialLinks, skills } from '../data/shared';
   socialLinks={socialLinks}
   navItems={navItems}
 >
-  <HeroSection siteConfig={siteConfig} socialLinks={socialLinks} />
-  <div class="h-px bg-border" />
-  <AboutSection about={about} />
-  <div class="h-px bg-border" />
-  <SkillsSection skills={skills} />
-  <div class="h-px bg-border" />
-  <ExperienceSection experiences={experiences} contractWork={contractWork} />
-  <div class="h-px bg-border" />
-  <ContactSection socialLinks={socialLinks} contact={contact} />
-  <footer class="py-12 text-center text-xs text-muted font-mono">
-    {footer.text}
-  </footer>
+  <PageContent
+    siteConfig={siteConfig}
+    socialLinks={socialLinks}
+    skills={skills}
+    about={about}
+    experiences={experiences}
+    contractWork={contractWork}
+    sectionLabels={sectionLabels}
+    contact={contact}
+    footer={footer}
+  />
 </Layout>

@@ -38,7 +38,7 @@ const { title, description, lang, siteConfig, socialLinks, navItems } = Astro.pr
   <!-- Mobile header -->
   <header class="lg:hidden fixed top-0 left-0 right-0 z-20 flex items-center justify-between px-6 py-3 bg-background/80 backdrop-blur-sm border-b border-border">
     <a href={lang === 'ja' ? '/' : '/en/'} class="text-sm font-bold text-foreground">
-      {siteConfig.initials}
+      {siteConfig.displayName}
     </a>
     <div class="flex items-center gap-3">
       <div class="flex items-center gap-1 text-xs font-mono">
