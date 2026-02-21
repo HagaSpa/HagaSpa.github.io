@@ -26,12 +26,12 @@ export const about: string[] = [
 export const experiences: Experience[] = [
   {
     period: '2025.08 - 現在',
-    title: 'CTO室 Platform Engineer / Data Engineer',
+    title: 'Platform Engineer / Data Engineer',
     company: 'OLTA 株式会社',
     url: 'https://corp.olta.co.jp/',
     description:
-      'Platform Engineer として GCP 上のインフラ改善と監視を担当し、パフォーマンス改善を実施。開発生産性の可視化や、AIツールの全社導入などの組織改善も担当。Data Engineer として Looker の整備や管理、ダッシュボードの最適化・新規構築を担当。',
-    technologies: ['GCP', 'BigQuery', 'GKE', 'Looker', 'Terraform', 'dbt', 'Django', 'PostgreSQL'],
+      'インフラの改善と監視を担当し、DBのパフォーマンス改善や k8s コンポーネントの更新、リクエスト増によるインシデント対応の推進を実施。開発生産性の可視化や、AI エージェントや Notion の全社導入を担当し組織改善にもコミット。データ基盤の整備や作成も担当している。',
+    technologies: ['GCP', 'BigQuery', 'GKE', 'Looker', 'Terraform', 'dbt', 'Django', 'PostgreSQL', 'k8s'],
   },
   {
     period: '2023.06 - 2025.08',
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     company: '株式会社 ダイニー',
     url: 'https://www.dinii.jp/',
     description:
-      'GCP 上のインフラ基盤の運用・改善を担当。Terraform で GCP リソースを全て IaC 化。秒間 5000 リクエスト超のサービス安定化のためキャパシティプランニングを実施。DevRel として TSKaigi 出展や技術イベント企画を主導し、採用活動にも貢献。',
+      '秒間 5000 リクエスト超のサービス安定化のためキャパシティプランニングやオンコール業務を担当。TSKaigi 出展や技術イベント企画を主導し、採用活動にも貢献。',
     technologies: ['GCP', 'Cloud Run', 'AlloyDB', 'Terraform', 'Cloud Monitoring', 'TypeScript', 'React Native'],
   },
   {
