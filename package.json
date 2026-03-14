@@ -14,7 +14,7 @@
     "@astrojs/compiler-rs": "^0.1.4",
     "@fontsource/inter": "^5.0.0",
     "@fontsource/jetbrains-mono": "^5.2.8",
-    "@lucide/astro": "^0.525.0",
+    "@lucide/astro": "^0.577.0",
     "astro": "^6.0.0"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.2.0",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "@types/bun": "^1.0.0",
-    "@types/node": "^22",
+    "@types/node": "^25",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^10",
     "eslint-plugin-astro": "^1.0.0",
