@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.2.0",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "@types/bun": "^1.0.0",
-    "@types/node": "^22",
+    "@types/node": "^25",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9",
     "eslint-plugin-astro": "^1.0.0",
