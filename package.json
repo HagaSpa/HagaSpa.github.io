@@ -11,14 +11,15 @@
     "lint:fix": "textlint --fix contents/resume.md"
   },
   "dependencies": {
+    "@astrojs/compiler-rs": "^0.1.4",
     "@fontsource/inter": "^5.0.0",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^0.525.0",
-    "astro": "^5.0.0"
+    "astro": "^6.0.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.1.0",
+    "@tailwindcss/vite": "^4.2.0",
     "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "@types/bun": "^1.0.0",
     "@types/node": "^22",
@@ -26,7 +27,7 @@
     "eslint": "^9",
     "eslint-plugin-astro": "^1.0.0",
     "husky": "^9.1.7",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.2.0",
     "textlint": "^15.0.1",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-filter-rule-whitelist": "^2.0.0",
