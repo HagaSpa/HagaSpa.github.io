@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": ["before 9am on saturday"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "description": "Group all non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies"
+    },
+    {
+      "description": "Use ci type for GitHub Actions commits",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci"
+    }
+  ]
+}
