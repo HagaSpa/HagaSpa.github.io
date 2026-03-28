@@ -1,5 +1,6 @@
 ---
-import { Github, Mail, Globe } from '@lucide/astro';
+import { Mail, Globe } from '@lucide/astro';
+import GithubIcon from './GithubIcon.astro';
 import XIcon from './XIcon.astro';
 import NavLinks from './NavLinks.astro';
 import type { SiteConfig, SocialLink, NavItem } from '../data/types';
@@ -75,7 +76,7 @@ const { siteConfig, socialLinks, navItems, lang } = Astro.props;
         class="text-muted hover:text-primary transition-colors"
         aria-label={link.label}
       >
-        {link.icon === 'github' && <Github class="h-4 w-4" />}
+        {link.icon === 'github' && <GithubIcon class="h-4 w-4" />}
         {link.icon === 'twitter' && <XIcon />}
         {link.icon === 'mail' && <Mail class="h-4 w-4" />}
         {link.icon === 'globe' && <Globe class="h-4 w-4" />}
