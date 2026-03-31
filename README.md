@@ -81,7 +81,7 @@ Resume content is managed through TypeScript data files in `src/data/` (`ja.ts`,
 
 ```
 ├── src/
-│   ├── components/    # Astro components (Sidebar, ThemeToggle, icons)
+│   ├── components/    # Astro components (SideNav, NavLinks, section components, icons)
 │   ├── layouts/       # Layout components
 │   ├── pages/         # Astro pages
 │   ├── styles/        # Global CSS
