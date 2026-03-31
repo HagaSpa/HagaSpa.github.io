@@ -30,7 +30,7 @@ This is a personal resume/portfolio website built with Astro, featuring a static
 ### File Structure
 - `/src/pages/` - Astro pages
 - `/src/layouts/` - Astro layout components
-- `/src/components/` - Astro components (Sidebar, ThemeToggle, brand icons)
+- `/src/components/` - Astro components (SideNav, NavLinks, section components, brand icons)
 - `/src/styles/` - Global CSS with Tailwind
 - `/contents/` - Archived content files (reference only, not used by the site)
 - `/public/` - Static assets
@@ -38,9 +38,8 @@ This is a personal resume/portfolio website built with Astro, featuring a static
 ### Core Components
 - **Layout** (`src/layouts/Layout.astro`) - Root layout with sidebar, dark mode support, and Inter font
 - **Index Page** (`src/pages/index.astro`) - Renders resume content from TypeScript data files
-- **Sidebar** (`src/components/Sidebar.astro`) - Profile info and contact links
-- **ThemeToggle** (`src/components/ThemeToggle.astro`) - Dark/light mode toggle button
-- **GithubIcon/TwitterIcon** (`src/components/`) - Custom SVG icon components
+- **SideNav** (`src/components/SideNav.astro`) - Profile info, language switcher, and theme toggle
+- **GithubIcon/XIcon** (`src/components/`) - Custom SVG icon components
 
 ### Content Management
 Resume content is managed through TypeScript data files in `/src/data/` (`ja.ts`, `en.ts`, `shared.ts`).
