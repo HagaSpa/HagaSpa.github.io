@@ -1,13 +1,13 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with Astro and deployed on GitHub Pages. Features a clean, professional design with dark mode support and resume content parsed from Markdown via Content Collections.
+A modern, responsive portfolio website built with Astro and deployed on GitHub Pages. Features a clean, professional design with dark mode support and resume content managed through TypeScript data files.
 
 ## Features
 
 - **Static Site Generation**: Optimized for GitHub Pages deployment
 - **Dark Mode**: Manual toggle + OS preference fallback with FOUC prevention
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dynamic Content**: Resume content managed through Markdown with Content Collections
+- **Dynamic Content**: Resume content managed through TypeScript data files
 - **Quality Assurance**: ESLint for code quality
 
 ## Tech Stack

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal resume/portfolio website built with Astro, featuring a static site setup for GitHub Pages deployment. The site displays a professional resume parsed from Markdown with Content Collections, styled with Tailwind CSS. Uses Bun as the package manager and runtime.
+This is a personal resume/portfolio website built with Astro, featuring a static site setup for GitHub Pages deployment. The site displays a professional resume managed through TypeScript data files, styled with Tailwind CSS. Uses Bun as the package manager and runtime.
 
 ## Key Commands
 
