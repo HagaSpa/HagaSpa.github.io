@@ -14,8 +14,7 @@ This is a personal resume/portfolio website built with Astro, featuring a static
 - `bun run preview` - Preview production build
 
 ### Quality Assurance
-- `bun run lint` - Run ESLint and text linting (checks both code and content)
-- `bun run lint:text` - Run textlint on markdown files (Japanese language rules)
+- `bun run lint` - Run ESLint
 
 ### CI/CD
 - `bun install --frozen-lockfile` - Install dependencies with exact versions (used in CI)
@@ -33,19 +32,18 @@ This is a personal resume/portfolio website built with Astro, featuring a static
 - `/src/layouts/` - Astro layout components
 - `/src/components/` - Astro components (Sidebar, ThemeToggle, brand icons)
 - `/src/styles/` - Global CSS with Tailwind
-- `/src/content.config.ts` - Content Collections configuration
-- `/contents/` - Markdown content files (currently `resume.md`)
+- `/contents/` - Archived content files (reference only, not used by the site)
 - `/public/` - Static assets
 
 ### Core Components
 - **Layout** (`src/layouts/Layout.astro`) - Root layout with sidebar, dark mode support, and Inter font
-- **Index Page** (`src/pages/index.astro`) - Renders resume content from Content Collections
+- **Index Page** (`src/pages/index.astro`) - Renders resume content from TypeScript data files
 - **Sidebar** (`src/components/Sidebar.astro`) - Profile info and contact links
 - **ThemeToggle** (`src/components/ThemeToggle.astro`) - Dark/light mode toggle button
 - **GithubIcon/TwitterIcon** (`src/components/`) - Custom SVG icon components
 
 ### Content Management
-Resume content is stored in `/contents/resume.md` with frontmatter for metadata. Uses Astro Content Collections with glob loader for markdown processing.
+Resume content is managed through TypeScript data files in `/src/data/` (`ja.ts`, `en.ts`, `shared.ts`).
 
 ### Styling
 - Tailwind CSS v4 with `@tailwindcss/vite` plugin and typography plugin
@@ -53,18 +51,11 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 - Responsive design with mobile-first approach
 - Inter font via `@fontsource/inter`
 
-### Text Quality
-Extensive textlint configuration for Japanese content quality, including rules for:
-- Technical writing standards
-- Typography and spacing
-- Language-specific grammar rules
-
 ## Development Notes
 
 - Uses TypeScript with Astro strict config
 - Package manager: Bun (not npm/yarn)
 - Configured for static site deployment on GitHub Pages
-- Resume content supports Japanese language with specialized linting rules
 - Images are loaded from external sources (GitHub profile pictures)
 - Dark mode: `<script is:inline>` in `<head>` for FOUC prevention
 
