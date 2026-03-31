@@ -6,9 +6,7 @@
     "dev": "bunx --bun astro dev",
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
-    "lint": "eslint . && bun run lint:text",
-    "lint:text": "textlint contents/resume.md",
-    "lint:fix": "textlint --fix contents/resume.md"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@astrojs/compiler-rs": "^0.1.4",
@@ -20,7 +18,6 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.2.0",
-    "@textlint-ja/textlint-rule-no-insert-dropping-sa": "^2.0.1",
     "@types/bun": "^1.0.0",
     "@types/node": "^25",
     "@typescript-eslint/parser": "^8.0.0",
@@ -28,25 +25,6 @@
     "eslint-plugin-astro": "^1.0.0",
     "husky": "^9.1.7",
     "tailwindcss": "^4.2.0",
-    "textlint": "^15.0.1",
-    "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-filter-rule-whitelist": "^2.0.0",
-    "textlint-rule-abbr-within-parentheses": "^1.0.2",
-    "textlint-rule-footnote-order": "^1.0.3",
-    "textlint-rule-general-novel-style-ja": "^1.3.0",
-    "textlint-rule-ja-hiragana-fukushi": "^1.3.0",
-    "textlint-rule-ja-hiragana-hojodoushi": "^1.1.0",
-    "textlint-rule-ja-hiragana-keishikimeishi": "^1.1.0",
-    "textlint-rule-ja-unnatural-alphabet": "^2.0.1",
-    "textlint-rule-ng-word": "^1.0.0",
-    "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
-    "textlint-rule-period-in-list-item": "^1.0.1",
-    "textlint-rule-prefer-tari-tari": "^1.0.3",
-    "textlint-rule-preset-ja-spacing": "^2.4.3",
-    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
-    "textlint-rule-preset-jtf-style": "^3.0.2",
-    "textlint-rule-prh": "^6.1.0",
-    "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "typescript": "^6.0.0"
   }
 }

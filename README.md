@@ -1,21 +1,20 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with Astro and deployed on GitHub Pages. Features a clean, professional design with dark mode support and resume content parsed from Markdown via Content Collections.
+A modern, responsive portfolio website built with Astro and deployed on GitHub Pages. Features a clean, professional design with dark mode support and resume content managed through TypeScript data files.
 
 ## Features
 
 - **Static Site Generation**: Optimized for GitHub Pages deployment
 - **Dark Mode**: Manual toggle + OS preference fallback with FOUC prevention
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Dynamic Content**: Resume content managed through Markdown with Content Collections
-- **Quality Assurance**: Comprehensive linting for both code and content
-- **Japanese Language Support**: Specialized text linting rules
+- **Dynamic Content**: Resume content managed through TypeScript data files
+- **Quality Assurance**: ESLint for code quality
 
 ## Tech Stack
 
 - **Framework**: Astro
 - **Styling**: Tailwind CSS v4 with Typography plugin
-- **Content**: Astro Content Collections (Markdown with frontmatter)
+- **Content**: TypeScript data files (`src/data/`)
 - **Language**: TypeScript
 - **Package Manager / Runtime**: Bun
 - **Deployment**: GitHub Pages (static output)
@@ -62,13 +61,13 @@ bun run preview
 
 ## Content Management
 
-Resume content is stored in `/contents/resume.md` with frontmatter for metadata. Edit this file to update your portfolio information.
+Resume content is managed through TypeScript data files in `src/data/` (`ja.ts`, `en.ts`, `shared.ts`).
 
 ## Customization
 
 - **Styling**: Modify Tailwind classes in components or `src/styles/global.css`
 - **Layout**: Edit `src/layouts/Layout.astro` and `src/components/`
-- **Content**: Update markdown files in `/contents/`
+- **Content**: Update data files in `src/data/`
 - **Assets**: Add files to `/public/`
 
 ## Available Scripts
@@ -76,8 +75,7 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 - `bun run dev` - Start development server
 - `bun run build` - Build production version (static output to `dist/`)
 - `bun run preview` - Preview production build
-- `bun run lint` - Run ESLint and text linting
-- `bun run lint:text` - Run textlint on markdown content
+- `bun run lint` - Run ESLint
 
 ## Project Structure
 
@@ -87,8 +85,7 @@ Resume content is stored in `/contents/resume.md` with frontmatter for metadata.
 │   ├── layouts/       # Layout components
 │   ├── pages/         # Astro pages
 │   ├── styles/        # Global CSS
-│   └── content.config.ts
-├── contents/          # Markdown content files
+│   └── data/          # TypeScript data files
 ├── public/            # Static assets
 ├── astro.config.mjs
 └── package.json
