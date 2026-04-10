@@ -66,11 +66,30 @@ description: "Software Engineer Resume"
 
 ### [OLTA 株式会社 (2025/08~)](https://corp.olta.co.jp/)
 
-**CTO室 SRE & Data Engineer (2025/08~)**
+**CTO室 Platform Engineer / Data Engineer (2025/08~)**
 
 - Data Engineer として Looker の整備や管理。既存のダッシュボードの最適化や新規ダッシュボードの設計・構築を担当し、ビジネス部門の意思決定を支援するデータ可視化基盤の強化に取り組む。BigQuery との連携を最適化し、クエリパフォーマンスの改善やコスト削減を実現
 
-- SRE として k8s コンポーネントのアップデートやインシデント対応の推進。クラスターのセキュリティパッチ適用やバージョンアップを実施し、システムの安定性とセキュリティを維持。また適切なタイプのクラスタに移行することで、コスト削減に努めた。インシデント発生時には迅速な原因調査と復旧作業を行い、再発防止策の策定まで一貫して対応
+- dbt の運用・保守を担当。incremental model の型変更対応や full-refresh 実行など、データ基盤の安定運用に貢献。レベニューシェア計算方法の改定プロジェクトでは、データ仕様書の作成から Looker への model/explorer 追加まで一貫して対応
+
+- SRE として k8s コンポーネントのアップデートやインシデント対応の推進。クラスターのセキュリティパッチ適用やバージョンアップを実施し、システムの安定性とセキュリティを維持
+
+- 全開発環境の GKE シングルゾーンクラスタ化を実施し、インフラコストを約 43% 削減。負荷試験による Resource Request の適正化や HPA 挙動の検証も行い、リソース効率を改善
+
+- INVOY の VM CPU 高騰障害に対応。Pod 配置の偏り問題の根本原因を特定し、livenessProbe 設定不備による無限ループ・CPU 浪費を発見・修正。メトリクス監視の定例化や Slow クエリの撲滅も実施
+
+- nginx-ingress から GKE Gateway API への移行調査を主導。移行計画の策定、annotation 検証、LB 経由ヘッダーの変更によるアプリケーション側の影響分析を実施
+
+- 開発生産性の可視化に取り組み、DevLake を GCE 上に構築・デプロイ。Grafana ダッシュボードによる投資配分の測定や PR ラベル運用を検討。既存の FindyTeam+ を DevLake に置き換えることで、年間約 63 万円のコスト削減を実現。テックブログの執筆・公開も担当
+
+- AI 活用推進として Claude Code の社内普及活動を主導し、Confluence ページ作成やチーム利用推進を実施。Gemini for Enterprise の評価や n8n の検討も行い、組織全体の開発効率化に貢献。また Notion への OKR 管理移行など、全社ツール導入もリード
+
+- **担当業務・技術スタック**
+    - GKE, Terraform, Cloud Monitoring を用いたインフラ運用・改善
+    - BigQuery, Looker, dbt を用いたデータ基盤の構築・運用
+    - DevLake, Grafana による開発生産性の可視化
+    - Django, PostgreSQL を用いたバックエンド開発
+    - Claude Code, Notion 等の全社導入推進
 
 
 ### [株式会社 ダイニー (2023/06~2025/08)](https://www.dinii.jp/)
