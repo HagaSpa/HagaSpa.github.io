@@ -9,7 +9,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/compiler-rs": "^0.1.4",
+    "@astrojs/compiler-rs": "^0.2.0",
     "@fontsource/inter": "^5.0.0",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^1.0.0",
