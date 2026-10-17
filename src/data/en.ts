@@ -30,8 +30,8 @@ export const experiences: Experience[] = [
     company: 'OLTA, Inc.',
     url: 'https://corp.olta.co.jp/',
     description:
-      'Responsible for infrastructure improvements and monitoring on GCP as a Platform Engineer, driving performance optimizations. Leading developer productivity visualization and company-wide AI tool adoption. Managing Looker dashboards optimization and development as a Data Engineer.',
-    technologies: ['GCP', 'BigQuery', 'GKE', 'Looker', 'Terraform', 'dbt', 'Django', 'PostgreSQL'],
+      'Responsible for the platform (GKE, CI/CD, GitHub) and data infrastructure across multiple products. Cut GKE server costs by about 43% by moving development clusters to single-zone. Established company-wide governance, such as managing GitHub Org permissions as code, and led dbt CI and the company-wide rollout of Claude Code.',
+    technologies: ['GCP', 'GKE', 'Terraform', 'GitHub Actions', 'BigQuery', 'dbt', 'Looker', 'Django', 'Claude Code'],
   },
   {
     period: '2023.06 - 2025.08',
@@ -73,19 +73,19 @@ export const experiences: Experience[] = [
 
 export const contractWork: Experience[] = [
   {
-    period: '2025.08 - Present',
+    period: '2025.08 -',
     title: 'Technical Advisor',
     company: 'seirin and company LLC',
     url: 'https://seirin-company.com/',
-    description: 'Consulting for the entire development organization. Knowledge sharing on AI-driven development workflows.',
+    description: 'Consulting for the entire development organization. Knowledge sharing on AI-driven development workflows. Currently inactive.',
     technologies: ['AI', 'Claude Code', 'Cursor'],
   },
   {
-    period: '2025.07 - Present',
+    period: '2025.07 -',
     title: 'SRE',
     company: 'TENHO, Inc.',
     url: 'https://tenho7.jp/',
-    description: 'Joined as SRE for a data infrastructure project. Built a data transfer pipeline from AWS Aurora to BigQuery.',
+    description: 'Joined as SRE for a data infrastructure project. Built a data transfer pipeline from AWS Aurora to BigQuery. Currently inactive.',
     technologies: ['AWS', 'BigQuery', 'TROCCO'],
   },
   {
