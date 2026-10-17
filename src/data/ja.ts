@@ -30,8 +30,8 @@ export const experiences: Experience[] = [
     company: 'OLTA 株式会社',
     url: 'https://corp.olta.co.jp/',
     description:
-      'インフラの改善と監視を担当し、DBのパフォーマンス改善や k8s コンポーネントの更新、リクエスト増によるインシデント対応の推進を実施。開発生産性の可視化や、AI エージェントや Notion の全社導入を担当し組織改善にもコミット。データ基盤の整備や作成も担当している。',
-    technologies: ['GCP', 'BigQuery', 'GKE', 'Looker', 'Terraform', 'dbt', 'Django', 'PostgreSQL', 'k8s'],
+      '複数プロダクトの Platform（GKE・CI/CD・GitHub）とデータ基盤を担当。開発環境のシングルゾーン化で GKE のサーバ費用を約 43% 削減。GitHub Org の権限管理のコード化など全社のガバナンスを整え、データ基盤の CI 整備や Claude Code の全社展開もリード。',
+    technologies: ['GCP', 'GKE', 'Terraform', 'GitHub Actions', 'BigQuery', 'dbt', 'Looker', 'Django', 'Claude Code'],
   },
   {
     period: '2023.06 - 2025.08',
@@ -73,19 +73,19 @@ export const experiences: Experience[] = [
 
 export const contractWork: Experience[] = [
   {
-    period: '2025.08 - 現在',
+    period: '2025.08 -',
     title: '技術顧問',
     company: 'seirin and company 合同会社',
     url: 'https://seirin-company.com/',
-    description: '開発組織全体に対するコンサル業務。AI による開発フローのナレッジシェア。',
+    description: '開発組織全体に対するコンサル業務。AI による開発フローのナレッジシェア。現在は稼働なし。',
     technologies: ['AI', 'Claude Code', 'Cursor'],
   },
   {
-    period: '2025.07 - 現在',
+    period: '2025.07 -',
     title: 'SRE',
     company: '株式会社 TENHO',
     url: 'https://tenho7.jp/',
-    description: 'データ基盤構築 PJ に SRE として参画。AWS Aurora から BigQuery へのデータ転送基盤を構築。',
+    description: 'データ基盤構築 PJ に SRE として参画。AWS Aurora から BigQuery へのデータ転送基盤を構築。現在は稼働なし。',
     technologies: ['AWS', 'BigQuery', 'TROCCO'],
   },
   {
